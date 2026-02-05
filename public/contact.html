@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | Engineering Firm</title>
+    <meta
+      name="description"
+      content="Contact our engineering team to discuss project goals, timelines, and technical requirements."
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="./index.html">Engineering Firm</a>
+        <nav class="main-nav">
+          <a href="./index.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./contact.html" aria-current="page">Contact</a>
+        </nav>
+        <button class="button primary" data-modal-open>Start Your Project</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Contact</p>
+          <h1>Let’s discuss your next engineering initiative.</h1>
+          <p class="lead">
+            Share your project goals and constraints. We will respond with recommended next steps
+            and a clear delivery path.
+          </p>
+          <button class="button primary" data-modal-open>Start Your Project</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two-column">
+          <div>
+            <h2>Reach us directly</h2>
+            <p>
+              We respond quickly to serious inquiries and provide a straightforward assessment of
+              fit, timeline, and scope.
+            </p>
+            <div class="contact-details">
+              <p><strong>Email:</strong> iamjaymarfrace@yahoo.com</p>
+              <p><strong>Availability:</strong> Monday–Friday, 9am–6pm</p>
+              <p><strong>Location:</strong> Remote with on-site support available</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3>Start with the essentials</h3>
+            <p>
+              Provide a short overview of your project and we will follow up with clarifying
+              questions and next steps.
+            </p>
+            <button class="button primary" data-modal-open>Start Your Project</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Engineering Firm</strong>
+          <p>Practical solutions. Dependable delivery.</p>
+        </div>
+        <div class="footer-actions">
+          <button class="button primary" data-modal-open>Start Your Project</button>
+          <a class="button ghost" href="./services.html">View Services</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="project-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close form">
+          ×
+        </button>
+        <h2 id="modal-title">Start Your Project</h2>
+        <p>Please share a few details so we can follow up quickly.</p>
+        <form id="project-form" class="project-form" method="post" action="/api/send-mail.php">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Project Details
+            <textarea name="details" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Request</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/site.js"></script>
+  </body>
+</html>

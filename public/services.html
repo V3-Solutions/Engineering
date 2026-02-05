@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services | Engineering Firm</title>
+    <meta
+      name="description"
+      content="Explore our engineering services, from planning and system design to technical advisory."
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="./index.html">Engineering Firm</a>
+        <nav class="main-nav">
+          <a href="./index.html">About</a>
+          <a href="./services.html" aria-current="page">Services</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <button class="button primary" data-modal-open>Start Your Project</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Services</p>
+          <h1>Engineering services designed for clarity and delivery.</h1>
+          <p class="lead">
+            We partner with organizations that need dependable execution, careful analysis, and
+            clear documentation across every phase of a project.
+          </p>
+          <button class="button primary" data-modal-open>Start Your Project</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container card-grid">
+          <article class="card">
+            <h2>Project Planning &amp; Feasibility</h2>
+            <p>
+              Define scope, assess constraints, and build a delivery roadmap with realistic
+              timelines and budgets.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Systems Engineering</h2>
+            <p>
+              Translate requirements into architecture, verification plans, and system
+              documentation that aligns teams.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Design &amp; Analysis</h2>
+            <p>
+              Perform technical analyses, modeling, and design reviews that reduce risk and
+              support confident decisions.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Quality &amp; Compliance</h2>
+            <p>
+              Establish quality controls, testing protocols, and compliance tracking for
+              regulated projects.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Program Management</h2>
+            <p>
+              Coordinate milestones, stakeholders, and reporting to keep delivery on track.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Technical Advisory</h2>
+            <p>
+              Provide independent review, risk mitigation, and strategic guidance for technical
+              leadership teams.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section light">
+        <div class="container two-column">
+          <div>
+            <h2>How we work</h2>
+            <p>
+              Every engagement begins with a focused discovery session. From there we build a
+              delivery plan, confirm milestones, and provide clear updates at each stage.
+            </p>
+          </div>
+          <div class="timeline">
+            <div>
+              <span>01</span>
+              <h3>Discovery</h3>
+              <p>Understand goals, constraints, and success criteria.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Plan</h3>
+              <p>Define scope, deliverables, and key milestones.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Deliver</h3>
+              <p>Execute with transparency and iterative checkpoints.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Engineering Firm</strong>
+          <p>Practical solutions. Dependable delivery.</p>
+        </div>
+        <div class="footer-actions">
+          <button class="button primary" data-modal-open>Start Your Project</button>
+          <a class="button ghost" href="./contact.html">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="project-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close form">
+          ×
+        </button>
+        <h2 id="modal-title">Start Your Project</h2>
+        <p>Please share a few details so we can follow up quickly.</p>
+        <form id="project-form" class="project-form" method="post" action="/api/send-mail.php">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Project Details
+            <textarea name="details" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Request</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/site.js"></script>
+  </body>
+</html>

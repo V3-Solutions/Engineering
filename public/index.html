@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engineering Firm | Practical, Reliable Project Delivery</title>
+    <meta
+      name="description"
+      content="We deliver practical engineering solutions with clear communication, dependable execution, and measurable outcomes."
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="./index.html">Engineering Firm</a>
+        <nav class="main-nav">
+          <a href="./index.html" aria-current="page">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <button class="button primary" data-modal-open>Start Your Project</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Engineering Partner</p>
+            <h1>Clear, dependable engineering for complex project goals.</h1>
+            <p class="lead">
+              We are a small engineering firm focused on disciplined planning, transparent
+              communication, and solutions that stand up to real-world conditions.
+            </p>
+            <div class="hero-actions">
+              <button class="button primary" data-modal-open>Start Your Project</button>
+              <a class="button ghost" href="./services.html">View Services</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h2>What clients value</h2>
+            <ul>
+              <li>Senior-led delivery with pragmatic guidance</li>
+              <li>Risk-aware planning and milestones you can trust</li>
+              <li>Lean, responsive teams aligned to your objectives</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two-column">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              Our firm was founded to provide dependable engineering support for organizations
+              that need clarity, speed, and accountability. We combine technical depth with a
+              straightforward consulting style to keep projects on track.
+            </p>
+            <p>
+              Whether you are refining a concept or delivering a critical project, we translate
+              goals into actionable plans and measurable outcomes.
+            </p>
+          </div>
+          <div class="feature-list">
+            <div class="feature">
+              <h3>Disciplined execution</h3>
+              <p>We align scope, schedule, and constraints so delivery stays predictable.</p>
+            </div>
+            <div class="feature">
+              <h3>Collaborative process</h3>
+              <p>Your team stays informed with concise updates and clear next steps.</p>
+            </div>
+            <div class="feature">
+              <h3>Built for longevity</h3>
+              <p>We prioritize maintainability and long-term operational performance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light">
+        <div class="container">
+          <h2>Capabilities at a glance</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Project Planning</h3>
+              <p>Scope definition, feasibility assessment, and delivery roadmaps.</p>
+            </article>
+            <article class="card">
+              <h3>Systems Engineering</h3>
+              <p>Requirements, architecture, and verification for complex systems.</p>
+            </article>
+            <article class="card">
+              <h3>Technical Advisory</h3>
+              <p>Independent review, risk mitigation, and decision support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Engineering Firm</strong>
+          <p>Practical solutions. Dependable delivery.</p>
+        </div>
+        <div class="footer-actions">
+          <button class="button primary" data-modal-open>Start Your Project</button>
+          <a class="button ghost" href="./contact.html">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="project-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close form">
+          ×
+        </button>
+        <h2 id="modal-title">Start Your Project</h2>
+        <p>Please share a few details so we can follow up quickly.</p>
+        <form id="project-form" class="project-form" method="post" action="/api/send-mail.php">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Project Details
+            <textarea name="details" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Request</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/site.js"></script>
+  </body>
+</html>
